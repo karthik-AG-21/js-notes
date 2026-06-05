@@ -1,5 +1,6 @@
 const lastLetter = (words) => {
-    return words.split(" ").map(word => word.slice(0,word.length-1) + word[word.length-1].toUpperCase()).join(" ")
+
+    return words.split(" ").map(word => word.slice(0,-1) + word.at(-1).toUpperCase())
 }
 
 console.log(lastLetter('hello world javascript'))

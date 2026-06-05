@@ -1,6 +1,6 @@
 const capitalizeFirstLetter = (words) =>{
 
-    return   words.split(" ").map(word => word[0].toUpperCase()+ word.slice(1,word.length))
+   return words.split(" ").map(word => word.charAt(0).toUpperCase()+word.slice(1))
 
     
 }

@@ -1,5 +1,6 @@
 const getGradeA = (students) => {
-     return students.filter(student => student.grade === 'A').map(person => person.name)
+
+     return students.filter((person)=> person.grade ==="A").map(person => person.name).join("")
 }
 
 console.log(getGradeA([

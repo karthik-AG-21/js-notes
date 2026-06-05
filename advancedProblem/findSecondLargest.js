@@ -41,9 +41,9 @@
 // console.log(secondLargest([10,2,3,55,8,45,63]))
 
 const secondSmallest = (number)=>{
-   let small = number.sort((a,b) => a-b)
-   console.log(small)
-   return small[1]
+   number.sort((a,b)=> a-b )
+   return   number[1]
+   
 }
 
 console.log(secondSmallest([10,2,3,55,8,45,63]))

@@ -2,13 +2,16 @@
 groupWords = (words)=>{
     let obj = {};
 
-    return words.forEach((word)=>{
-        if(obj[word]){
-            return obj[word.length] = word;
+    words.forEach((word)=>{
+        if(!obj[word.length]){
+            obj[word.length] = word;
+        }
+        else{
+            obj[word.length]=obj[word.length]+","+word
         }
     })
-
+return obj
 }
 
 
-console.log(groupWords(["hi","cat","hello"]))
+console.log(groupWords(["hi","cat","hello", "rat"]))

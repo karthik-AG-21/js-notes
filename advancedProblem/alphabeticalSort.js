@@ -1,5 +1,5 @@
 const sortingWord=(names)=>{
-  return names.sort((a,b)=>a.name.localeCompare(b.name))
+  return names.sort((a,b)=> a.name.localeCompare(b.name))
 }
 
 console.log(sortingWord([

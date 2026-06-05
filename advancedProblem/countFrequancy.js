@@ -1,14 +1,14 @@
-
+let obj = {}
 const charFrequency = (word)=>{
-    let empty = {}
-   word.split("").forEach(char =>{
-        if(empty[char]){
-              empty[char]++
-        }else{
-             empty[char]=1;
-        }
-    })
-    return empty
+  word.split("").forEach(char => {
+    if(obj[char]){
+        obj[char]++
+    }else{
+        obj[char] = 1;
+    }
+  })
+  return obj
+
 }
 
 console.log(charFrequency("hello"))

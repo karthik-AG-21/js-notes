@@ -1,11 +1,5 @@
 const replace = (nums) =>{
-    return  nums.map(num=>{
-        if(num%2===1){
-           return "odd"
-        }else{
-            return num;
-        }
-    })
+    return nums.filter(num => num%2===1)
   
 }
 

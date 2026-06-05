@@ -1,13 +1,13 @@
 
-
-const countConsonants = (word) => {
-    let count = 0;
-    word.split("").map(char => {
-        if(!"aeiou".includes(char)){
-            count++;
+let count =0;
+const countConsonants = (words) => {
+     words.split(" ").map(word => word.split("").filter(char =>{
+        if(!'aeiouAEIOU'.includes(char)){
+            count++
         }
-    })
-    return count
+    } ))
+
+    return count;
 }
 
-console.log(countConsonants("helloworld"))
+console.log(countConsonants("hello world"))

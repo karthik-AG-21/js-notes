@@ -4,16 +4,15 @@
 
 
 const wordFrequency =(words)=>{
-    
-    let empty = {}
-    words.split(" ").map(word =>{
-        if(empty[word]){
-            empty[word]++
+    let obj = {}
+    words.split(" ").forEach(word => {
+        if(obj[word]){
+            obj[word]++
         }else{
-            empty[word] = 1;
+            obj[word]= 1
         }
     })
-    return empty;
+    return obj
 }
 
 console.log(wordFrequency("apple banana apple"))

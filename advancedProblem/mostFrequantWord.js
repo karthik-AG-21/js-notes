@@ -18,6 +18,8 @@ const mostFrequentWord = (words)=>{
                 heighest = word;
             }
         }
+
+        
     
 
     return heighest;
