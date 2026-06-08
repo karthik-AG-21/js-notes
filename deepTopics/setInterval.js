@@ -117,3 +117,127 @@
 // let newObj = JSON.parse(data)
 
 // console.log(newObj)
+
+
+// newObj = {name:"karthik", place:"kerala"}
+
+// console.log(newObj)
+
+// let newJson = JSON.stringify(newObj)
+
+// console.log(newJson)
+
+// let convertedJson = JSON.parse(newJson)
+
+// console.log(convertedJson)
+
+
+// const employee = {
+//     id: 1,
+//     name: "Karthik",
+//     skills: ["HTML", "CSS", "JavaScript"],
+//     active: true
+// };
+
+// let jsonEmp = JSON.stringify(employee)
+// console.log(jsonEmp)
+
+// let newEmp = JSON.parse(jsonEmp)
+
+// console.log(newEmp)
+
+// console.log(employee.skills[1])
+
+
+
+//callback hell
+
+// setTimeout(()=>{
+//     console.log("login")
+
+//     setTimeout(()=>{
+//         console.log("fetch user")
+
+//         setTimeout(()=>{
+//             console.log("fetch orders")
+//             setTimeout(()=>{
+//                 console.log("show orders")
+//             },2000)
+//         },2000)
+//     },2000)
+// },2000)
+
+// setTimeout(()=>{
+//     console.log("start project")
+//     setTimeout(()=>{
+//         console.log("connect database")
+//         setTimeout(()=>{
+//             console.log("fetch users")
+//             setTimeout(()=>{
+//                 console.log("send emial")
+//                 setTimeout(()=>{
+//                     console.log("project end ")
+//                 },1000)
+//             },1000)
+//         },1000)
+//     },1000)
+// },1000)
+
+
+// const p = new Promise((resolve , reject)=>{
+//     reject('error in finding')
+
+// })
+
+// p.then(data => console.log(data)).catch(error => console.log(error))
+
+
+// let payment = false;
+// const p = new Promise((resolve , reject)=>{
+//     if(payment){
+//         resolve("payment is success")
+//     }else{
+//         reject("error in payment")
+//     }
+// })
+// p.then(data => console.log(data)).catch(error => console.log(error))
+
+
+
+// fetch("https://jsonplaceholder.typicode.com/users")
+// .then(res => {
+//     console.log(res.status)
+//         console.log(res.ok);
+//         return res.json();
+
+//     })
+
+// fetch("https://jsonplaceholder.typicode.com/users")
+// .then(res => {
+//     console.log(res.status)
+//         console.log(res.ok);
+//         return res.json()
+//         .then(data=> {
+//             const  user = data.find(user => user.id === 5);
+//             console.log(user)
+//         }).catch(error => {console.log('something wrong');
+//         console.log(error)})
+            
+
+//     })
+
+
+fetch("https://jsonplaceholder.typicode.com/users")
+.then(res => {
+    console.log(res.status)
+        console.log(res.ok);
+        return res.json()
+        .then(data=> {
+            const  user = data.find(user => user.id === 5);
+            console.log(user)
+        }).catch(error => {console.log('something wrong');
+        console.log(error)})
+            
+
+    })
+
