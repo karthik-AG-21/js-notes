@@ -227,17 +227,142 @@
 //     })
 
 
-fetch("https://jsonplaceholder.typicode.com/users")
-.then(res => {
-    console.log(res.status)
-        console.log(res.ok);
-        return res.json()
-        .then(data=> {
-            const  user = data.find(user => user.id === 5);
-            console.log(user)
-        }).catch(error => {console.log('something wrong');
-        console.log(error)})
-            
+// fetch("https://jsonplaceholder.typicode.com/users")
+// .then(res => res.json()).then(data=>{const user = data.filter(user => user.id == 11)
+//     console.log(user)
+// }).catch(error => console.log(error))
 
-    })
 
+// const user = {
+//     name: "Karthik",
+//     email: "karthik@gmail.com"
+// };
+
+// fetch("https://jsonplaceholder.typicode.com/users", {
+//     // fill here
+//     method: "POST",
+//     header:{"Content-Type":"application/json"},
+//     body : JSON.stringify(user)
+// })
+// .then(res => res.json())
+// .then(data => console.log(data))
+// .catch(error => console.log(error));
+
+
+// async function getUsers() {
+//     try {
+//         const res = await fetch(
+//             "https://jsonplaceholder.typicode.com/users"
+//         );
+
+//         const data = await res.json();
+
+//         console.log(data);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+
+// getUsers();
+
+// async function test() {
+//     try {
+//         await Promise.reject("Something failed");
+
+//         console.log("This won't run");
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+
+// test();
+
+
+
+// async function test() {
+//     try{
+//         const res  = await fetch("https://jsonplaceholder.typicode.comusers");
+//       const data = res.json()
+//       console.log(data)  
+//     }catch(error){
+//         console.log(error)
+//     }
+// }
+// test();
+
+
+// class Car {
+//   constructor(brand, color) {
+//     this.brand = brand;
+//     this.color = color;
+//   }
+
+// //   drive() {
+// //     console.log(this.brand + " is driving");
+// //   }
+// }
+
+// const car1 = new Car("Toyota", "Red");
+// const car2 = new Car("BMW", "Black");
+
+// // car1.drive();
+// // car2.drive();
+
+
+
+// class Car {
+//     constructor(brand, color){
+//         this.brand = brand;
+//         this.color = color;
+//     }
+
+//     drive(){
+//         console.log(this.brand + " is driving")
+//     }
+// }
+
+//    const car1 = new Car('TOYOTA', "red");
+//    const car1 = new Car('BMW', "black");
+
+
+//    car1.drive();
+//    car2.drive();
+
+
+
+// class bike{
+//     constructor(brand, color){
+//         this.brand = brand ;
+//         this.color = color;
+//     }
+//     ride(){
+//         console.log(this.brand + " is riding")
+//     }
+
+//    }
+
+//    const bike1 = new bike("yamaha", "red")
+//    const bike2 = new bike("hero", "black")
+
+//    bike1.ride();
+//    bike2.ride();
+
+// const a = 10;
+// let age = 20;
+// console.log(age)
+
+// let name = "karthik"
+
+// if(name === "karthik"){
+//     let age = 20
+//     console.log(age)
+// }
+// console.log(age)
+
+// let age = 20;
+
+// {
+//     var age = 30;
+// }
+
+// console.log(age)
