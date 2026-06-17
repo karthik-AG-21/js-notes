@@ -102,7 +102,9 @@ const products = [
 
 
 const totalPrice =(products)=>{
-    return products.filter(product => product.category === "Electronics").red
+    return products.filter(product => product.category === "Electronics").reduce((sum ,curr)=>{
+      sum+curr,0
+    })
 
 }
 

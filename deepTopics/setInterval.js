@@ -1,25 +1,21 @@
-// setInterval(() => {
-//   console.log("Hello");
-// }, 100);
-
+// setInterval(()=>{
+//     console.log("hello");
+// },1000)
 
 // setTimeout(()=>{
-//     console.log("guys")
-// },3000)
-
-
-
-// function add (){
-//     console.log("2")
+//     console.log("hello")
+// },2000)
+// function one(){
+//     console.log("one")
+//     two()
 // }
 
-// function two (){
-//     add()
-//     console.log("1")
-
+// function two(){
+//     console.log("two")
 // }
+// one()
 
-// two()
+
 
 
 // console.log("A")
@@ -33,12 +29,11 @@
 
 // promises
 
+// const p = new Promise((resolve)=>{
+//     resolve("yes")
+    
 
-// const task = new promise((resolve)=>{
-//     resolve("done")
-// });
-
-// task.then(data => console.log(data)) 
+// }).then(data => console.log(data))
 
  // 
 
@@ -76,31 +71,30 @@
 //   console.log(4);
 // }, 0);
 
+// setTimeout(()=>{
+//     console.log("one")
+//     setTimeout(()=>{
+//         console.log('two')
+//         setTimeout(()=>{
+//             console.log('three')
+//         },5000)
+//     },1000)
+// },10000)
 
-// setTimeout(() => {
-//   console.log("Step 1");
-
-//   setTimeout(() => {
-//     console.log("Step 2");
-
-//     setTimeout(() => {
-//       console.log("Step 3");
-//     }, 1000);
-
-//   }, 1000);
-
-// }, 5000);
-
-
-
-
-// fetch("https://jsonplaceholder.typicode.com/users")
-// .then(res => {
-//   console.log(res);
-// });
+// "https://jsonplaceholder.typicode.com/users"
+// fetch("https://jsonplaceholder.typicode.comusers")
+// .then(res => res.json())
+// .then(data=> console.log(data))
+// .catch(error => console.log(error))
 
 
-
+// const p = new Promise((resolve , reject)=>{
+//     fetch("https://jsonplaceholder.typicode.com/users")
+//     .then(resolve).catch(reject)
+// })
+// p.then(res => res.json())
+// .then(data=> console.log(data))
+// .catch(error=>console.log(error))
 
 // let obj ={
 //     name:"karthik",
@@ -366,3 +360,169 @@
 // }
 
 // console.log(age)
+
+
+// async function greet(){
+//     try{
+//     const response =  await fetch("https://jsonplaceholder.typicode.com/users")
+
+//     if(!response.ok){
+//         throw new Error("failed to fetch")
+//     }
+
+//     const data = await response.json()
+
+//     console.log(data)
+
+//     }catch(error){
+//         console.log(error.message)
+//     }
+
+// }
+
+// greet()
+
+
+
+
+// class bike{
+//     constructor(brand, color){
+//         this.brand = brand;
+//         this.color = color ; 
+//     }
+
+//     ride(){
+//         console.log(`${this.brand} is driving`)
+//     }
+
+
+// }
+
+// const bike1 = new bike("bmw","black")
+
+// bike1.ride()
+
+
+
+// function memorization(num){
+
+//     let data = {}
+//     return function(num){
+//         if(data[num]){
+//             return data[num]
+//         }
+
+//         data[num] = num * num;
+//         return data[num]
+//     }
+// }
+
+// let fn = memorization()
+// console.log(fn(5))
+// console.log(fn(5))
+
+
+
+// const products = [
+//   {
+//     id: 1,
+//     name: "Laptop",
+//     price: 55000,
+//     category: "Electronics",
+//   },
+//   {
+//     id: 2,
+//     name: "Smartphone",
+//     price: 25000,
+//     category: "Electronics",
+//   },
+//   {
+//     id: 3,
+//     name: "Headphones",
+//     price: 2000,
+//     category: "Accessories",
+//   },
+//   {
+//     id: 4,
+//     name: "Keyboard",
+//     price: 1500,
+//     category: "Accessories",
+//   },
+//   {
+//     id: 5,
+//     name: "Mouse",
+//     price: 800,
+//     category: "Accessories",
+//   },
+//   {
+//     id: 6,
+//     name: "Monitor",
+//     price: 12000,
+//     category: "Electronics",
+//   },
+//   {
+//     id: 7,
+//     name: "Backpack",
+//     price: 1200,
+//     category: "Bags",
+//   },
+//   {
+//     id: 8,
+//     name: "Water Bottle",
+//     price: 300,
+//     category: "Lifestyle",
+//   },
+//   {
+//     id: 9,
+//     name: "Smart Watch",
+//     price: 5000,
+//     category: "Wearables",
+//   },
+//   {
+//     id: 10,
+//     name: "Gaming Chair",
+//     price: 10000,
+//     category: "Furniture",
+//   },
+// ];
+
+
+// const totalPrice =(products)=>{
+//     return  products.filter(item => item.category === "Accessories").reduce((sum ,curr)=>{
+//         return sum+curr.price;
+//     },0)
+//     return totall
+
+// }
+
+// console.log(totalPrice(products))
+
+
+// // const totalPrice = (products) => {
+// //     return products
+// //         .filter(item => item.category === "Accessories")
+// //         .reduce((sum, curr) => {
+// //             return sum + curr.price;
+// //         }, 0);
+// // };
+
+// // console.log(totalPrice(products));
+
+// const reverse = (words) =>{
+//    return words.split(" ").map(item=> item.split("").reverse().join("")).join(" ")
+// }
+
+// console.log(reverse('i love javaScript'))
+
+
+
+
+// const length =(words)=>{
+// //    console.log( words.split(" 
+// let  array = words.split(" ")
+// array.forEach(word=>{
+//     word
+// })
+// }
+
+// console.log(length('hello world '))
